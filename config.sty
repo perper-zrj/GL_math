@@ -1,0 +1,133 @@
+\usepackage{geometry}
+\geometry{papersize={21cm,29.7cm}}
+% 默认大小为A4
+\geometry{left=3cm,right=3cm,top=2cm,bottom=2cm}
+\usepackage{pdfpages}
+\usepackage{fontspec}
+
+\pagestyle{plain}
+
+% 数学与符号
+\usepackage{amsmath, amssymb, mathtools} % 数学公式与符号支持
+\usepackage{tikz,enumitem}
+\usetikzlibrary{arrows.meta}
+\usepackage{unicode-math}
+\everymath{\displaystyle}
+
+\allowdisplaybreaks
+\usepackage{pifont}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{extarrows}
+\let\arrowvert\undefined
+\let\Arrowvert\undefined
+\let\bracevert\undefined
+
+\usepackage{yhmath}
+
+% 定义choices环境
+\newlist{choices}{enumerate}{1}
+%\setlist[choices,1]{
+	%	label=\Alph*.,
+	%	leftmargin=2em,
+	%	itemsep=0.3em,
+	%	topsep=0.3em
+	%}
+\setlist[choices,1]{label=\Alph*., leftmargin=1.5em, itemsep=0em, before=\begin{multicols}{2}, after=\end{multicols}}
+\usepackage{multicol}
+
+
+\usepackage{xcolor}                                 % 引入定制颜色的xcolor
+\definecolor{LightBlue}{RGB}{250, 255, 255}        % 自定义颜色LightBlue
+\usepackage{tcolorbox}                              % 引入tcolorbox宏包
+\tcbuselibrary{breakable, most, skins, theorems} 
+\newtcolorbox{question}[2][breakable] {             % 定义解答和问题的样式
+	colback = LightBlue,
+	colframe = cyan, 
+	fonttitle = \bfseries,  
+	title = #2, #1
+}
+\newenvironment{solution}{\noindent{\textbf{{\color{cyan}解答}}}\quad}
+
+
+% 图形与绘图
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+
+\usepackage{diagbox}
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+
+% 列表与枚举
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=(\arabic*).}
+
+% 表格
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+
+% 附录与浮动体
+\usepackage{appendix}
+\usepackage{float}
+
+% 颜色与高亮
+\usepackage{pagecolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{orange}{RGB}{255,127,0}
+\definecolor{aqua}{RGB}{0,255,255} 
+\definecolor{violet}{RGB}{192,0,255} 
+
+\usepackage{listings}    % 导入 listings 宏包
+
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	frame=tb,
+	aboveskip=2mm,
+	belowskip=2mm,
+	showstringspaces=false,
+	columns=flexible,
+	framerule=1pt,
+	rulecolor=\color{gray!35},
+	backgroundcolor=\color{gray!5},
+	basicstyle={\footnotesize\ttfamily\baselineskip=0.9\baselineskip},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+	numbers=left,
+	numberstyle=\scriptsize,
+	stepnumber=1,
+	lineskip=-1pt,
+}
+
+
+% 标题与超链接
+\usepackage[breaklinks,colorlinks,bookmarksnumbered,linkcolor=black,urlcolor=blue]{hyperref}
+
+% 段落与行距
+\usepackage{indentfirst}
+\setlength{\parindent}{2.45em}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.625}
+
+% 目录深度设置
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4}

@@ -1,0 +1,24 @@
+## LaTeX 常见的中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdfsync
+*.alg
+*.loa
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.acn
+*.acr
+*.ist
+
+## 选做：如果你不希望 PDF 也上传（通常建议只传源码）
+# *.pdf
